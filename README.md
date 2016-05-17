@@ -1,2 +1,28 @@
-# keen-event-counter
-Given a project, finds the total number of events in each collection over a given timeframe
+# Count events 
+Use this little ruby script to figure out which of your Keen event collections are collecting the most events.
+Given a project specified in .env, the script runs a count for each collection in the project. 
+At the end of the script, the counts will be outputted to a csv with a format like this:
+
+project id | collection | count
+--- | --- | ---
+53dda0af3831aaaaa2000000 | BoughtProduct | 650
+53dda0af3831aaaaa2000000 | GameCompletion | 11960
+53dda0af3831aaaaa2000000 | UserStats | 154
+53dda0af3831aaaaa2000000 | PauseGame | 4190
+53dda0af3831aaaaa2000000 | PlayButton | 1224
+53dda0af3831aaaaa2000000 | TutorialButton | 328
+
+
+# Steps
+1. Download counter.rb
+2. In same folder as counter.rb, create .env file with the following variables:
+  
+   ```
+   KEEN_PROJECT_ID=aaaaaaaaaaaaaaaa
+   KEEN_READ_KEY=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb.....
+   KEEN_MASTER_KEY=CCCCCCCCCCCCCCCCC
+   ```
+   
+3. In terminal in same folder, run the command `ruby counter.rb previous_7_days`
+4. You can modify the timeframe to be previous_8_hours, previous_2_weeks, or whatever timeframe you like.
+5. Check the folder for the generated csv file which should be named `event_counts_<project_id>_<timeframe>.csv'
