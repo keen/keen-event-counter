@@ -25,4 +25,4 @@ project id | collection | count
    
 3. In terminal in same folder, run the command `ruby counter.rb previous_7_days`
 4. You can modify the timeframe to be previous_8_hours, previous_2_weeks, or whatever timeframe you like.
-5. Check the folder for the generated csv file which should be named `event_counts_<project_id>_<timeframe>.csv'
+5. Check the console output to see event totals for each collection as they come in. After the script is completed, you can also find the results in a csv file in the same folder. It should be named `event_counts_project_id_timeframe.csv'
