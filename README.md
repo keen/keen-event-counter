@@ -12,6 +12,9 @@ project id | collection | count
 53dda0af3831aaaaa2000000 | PlayButton | 1224
 53dda0af3831aaaaa2000000 | TutorialButton | 328
 
+# Requirements
+There are two packages required in order to run the counter.rb command. The first is the [Keen Command Line Interface](https://github.com/keen/keen-cli) which can be installed through the terminal via `gem install keen-cli`. The second is [dotenv](https://www.npmjs.com/package/dotenv) which can be also installed via the terminal w/ npm `npm install dotenv`
+
 
 # Steps
 1. Download counter.rb
